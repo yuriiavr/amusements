@@ -39,7 +39,7 @@ export default function ProjectPage({
             size={14}
             className="group-hover:-translate-x-2 transition-transform"
           />
-          Back to Index
+          Back
         </Link>
       </nav>
 
@@ -124,9 +124,9 @@ export default function ProjectPage({
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-6 right-6 md:bottom-12 md:right-12 bg-white text-black px-6 py-3 md:px-10 md:py-5 rounded-full font-bold text-xs md:text-sm flex items-center gap-3 hover:scale-105 transition-all active:scale-95 shadow-2xl z-20 group/demo"
+                className="absolute font-ukraine font-bold bottom-6 right-6 md:bottom-12 md:right-12 bg-white text-black px-6 py-3 md:px-10 md:py-5 rounded-full font-bold text-xs md:text-sm flex items-center gap-3 hover:scale-105 transition-all active:scale-95 shadow-2xl z-20 group/demo"
               >
-                Live Demo
+                Try it
                 <ExternalLink
                   size={16}
                   className="group-hover/demo:rotate-12 transition-transform"
@@ -144,7 +144,7 @@ export default function ProjectPage({
               <h2 className="text-white/20 font-mono text-[10px] tracking-[0.4em] uppercase mb-10">
                 / Overview
               </h2>
-              <p className="text-2xl md:text-4xl font-light leading-snug text-gray-400">
+              <p className="font-ukraine font-medium text-2xl md:text-4xl font-light leading-snug text-gray-400">
                 {project.fullDescription}
               </p>
             </div>
@@ -154,7 +154,7 @@ export default function ProjectPage({
                 <h2 className="text-white/20 font-mono text-[10px] tracking-[0.4em] uppercase mb-8">
                   / Features
                 </h2>
-                <ul className="space-y-4">
+                <ul className="font-ukraine font-medium space-y-4">
                   {project.features.map((f: string, i: number) => (
                     <li
                       key={i}
@@ -199,9 +199,9 @@ export default function ProjectPage({
                 href="https://t.me/yurii_av"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 text-xl md:text-3xl font-light"
+                className="group font-ukraine font-medium flex items-center gap-4 text-xl md:text-3xl font-light"
               >
-                @yurii_av
+                Ваші донати мотивують створювати
                 <MoveRight className="group-hover:translate-x-4 transition-transform" />
               </a>
             </div>

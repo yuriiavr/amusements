@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import * as LucideIcons from "lucide-react";
-import { ArrowUpRight, Plus, ChevronDown } from "lucide-react";
+import { ArrowUpRight, Plus, ChevronDown, MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
@@ -53,14 +53,16 @@ export default function Portfolio() {
                 {project.title}
               </h3>
             ) : (
-              <h3 className={`${defaultTitleStyles} group-hover:scale-[1.02] origin-left pr-6`}>
+              <h3
+                className={`${defaultTitleStyles} group-hover:scale-[1.02] origin-left pr-6`}
+              >
                 {project.title}
               </h3>
             )}
           </div>
 
           <div className="md:col-span-4 md:opacity-0 group-hover:opacity-100 transition-all duration-500 md:translate-y-4 group-hover:translate-y-0">
-            <p className="text-gray-500 md:text-gray-400 text-sm md:text-lg leading-relaxed mb-4 md:mb-6 font-light line-clamp-2 md:line-clamp-none">
+            <p className="font-ukraine font-medium text-gray-500 md:text-gray-400 text-sm md:text-lg leading-relaxed mb-4 md:mb-6 font-light line-clamp-2 md:line-clamp-none">
               {project.fullDescription}
             </p>
             <div className="flex items-center gap-2 text-white/40 group-hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em]">
@@ -75,7 +77,10 @@ export default function Portfolio() {
   };
 
   const renderUsefulCard = (project: (typeof projects)[0]) => {
-    const IconComponent = (LucideIcons as any)[project.slug === "ai-fixer" ? "Brain" : "ShieldCheck"] || LucideIcons.Code2;
+    const IconComponent =
+      (LucideIcons as any)[
+        project.slug === "ai-fixer" ? "Brain" : "ShieldCheck"
+      ] || LucideIcons.Code2;
 
     return (
       <Link
@@ -93,15 +98,20 @@ export default function Portfolio() {
         </div>
 
         <div>
-          <h3 className={`font-bold text-3xl md:text-4xl mb-3 md:mb-4 bg-gradient-to-r bg-clip-text text-transparent ${project.titleGradient}`}>
+          <h3
+            className={`font-bold text-3xl md:text-4xl mb-3 md:mb-4 bg-gradient-to-r bg-clip-text text-transparent ${project.titleGradient}`}
+          >
             {project.title}
           </h3>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed line-clamp-3 mb-6 md:mb-8 font-medium">
+          <p className="font-ukraine font-medium text-gray-600 text-sm md:text-base leading-relaxed line-clamp-3 mb-6 md:mb-8 font-medium">
             {project.fullDescription}
           </p>
           <div className="flex flex-wrap gap-2">
             {project.stack.map((s) => (
-              <span key={s} className="text-[8px] md:text-[9px] font-bold uppercase tracking-tighter px-2 md:px-3 py-1 bg-white rounded-full border border-black/5 text-gray-500">
+              <span
+                key={s}
+                className="text-[8px] md:text-[9px] font-bold uppercase tracking-tighter px-2 md:px-3 py-1 bg-white rounded-full border border-black/5 text-gray-500"
+              >
                 {s}
               </span>
             ))}
@@ -149,8 +159,11 @@ export default function Portfolio() {
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">
             <p className="text-gray-500 text-lg md:text-2xl max-w-xl font-light leading-snug">
-              Engineering digital value{" "} <br />
-              <span className="text-white italic font-normal">and interactive joy</span>.
+              Engineering digital value <br />
+              <span className="text-white italic font-normal">
+                and interactive joy
+              </span>
+              .
             </p>
             <ChevronDown className="w-6 h-6 text-gray-500 animate-bounce hidden md:block" />
           </div>
@@ -160,8 +173,12 @@ export default function Portfolio() {
 
       <section className="bg-[#050505] py-20 md:py-40 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-32 flex flex-col md:flex-row justify-between items-baseline gap-4">
-          <h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic opacity-10 leading-none">Fun</h2>
-          <p className="text-indigo-400 font-mono text-[10px] md:text-sm tracking-[0.3em] uppercase">/ Digital Playground</p>
+          <h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase italic opacity-10 leading-none">
+            Fun
+          </h2>
+          <p className="text-indigo-400 font-mono text-[10px] md:text-sm tracking-[0.3em] uppercase">
+            / Digital Playground
+          </p>
         </div>
         <div className="border-t border-white/5">
           {amusementProjects.map((p, i) => renderAmusementRow(p, i))}
@@ -172,8 +189,12 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
           <div className="flex items-center justify-between border-b border-black/10 pb-8 md:pb-12">
             <div>
-              <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase mb-2 md:mb-4">Utility</h2>
-              <p className="text-gray-400 font-mono text-[10px] md:text-xs tracking-widest uppercase italic">Production Ready Tools</p>
+              <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase mb-2 md:mb-4">
+                Utility
+              </h2>
+              <p className="text-gray-400 font-mono text-[10px] md:text-xs tracking-widest uppercase italic">
+                Production Ready Tools
+              </p>
             </div>
             <Plus className="w-8 h-8 md:w-12 md:h-12 text-black/10" />
           </div>
@@ -186,14 +207,32 @@ export default function Portfolio() {
       <footer className="bg-white text-black py-20 md:py-32 px-6 md:px-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
           <div className="space-y-6 md:space-y-8">
-            <h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8]">Let's <br /> Talk.</h2>
-            <a href="https://t.me/yurii_av" className="text-xl md:text-4xl font-light hover:text-indigo-600 transition-colors border-b-2 border-black/5 hover:border-indigo-600 pb-1 inline-block">@yurii_av</a>
+            <h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8]">
+              Support <br /> the craft.
+            </h2>
+            <a
+              href="https://t.me/yurii_av"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group font-ukraine flex items-center gap-4 text-xl md:text-4xl font-light hover:text-indigo-600 transition-colors "
+            >
+              Ваші донати мотивують створювати
+              <MoveRight className="group-hover:translate-x-4 transition-transform" />
+            </a>
           </div>
           <div className="flex flex-row md:flex-col flex-wrap gap-6 md:gap-8 font-bold uppercase tracking-tighter text-lg md:text-2xl w-full md:w-auto">
-            <Link href="#" className="hover:line-through">GitHub</Link>
-            <Link href="#" className="hover:line-through">LinkedIn</Link>
-            <Link href="#" className="hover:line-through">Threads</Link>
-            <div className="font-mono text-[10px] tracking-[0.3em] opacity-30 pt-4 border-t border-black/5 w-full md:text-right">© 2026 KYIV / 50.4501° N</div>
+            <Link href="#" className="hover:line-through">
+              GitHub
+            </Link>
+            <Link href="#" className="hover:line-through">
+              LinkedIn
+            </Link>
+            <Link href="#" className="hover:line-through">
+              Threads
+            </Link>
+            <div className="font-mono text-[10px] tracking-[0.3em] opacity-30 pt-4 border-t border-black/5 w-full md:text-right">
+              © 2026 KYIV / 50.4501° N
+            </div>
           </div>
         </div>
       </footer>

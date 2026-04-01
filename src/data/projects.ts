@@ -23,6 +23,8 @@ export const projectsData = {
     status: "Active Development",
     titleGradient: "from-purple-400 to-indigo-300",
     category: "useful",
+    videoUrl: "/videos/aifixer-demo.mp4",
+    demoUrl: "https://github.com/yuriiavr/text-corrector/releases/tag/AiFixer",
     year: "2026"
   },
   "alias-ai": {
@@ -64,6 +66,8 @@ export const projectsData = {
     status: "Stable",
     titleGradient: "from-emerald-400 to-cyan-500",
     category: "useful",
+    videoUrl: "/videos/password-demo.mp4",
+    demoUrl: "https://github.com/yuriiavr/password-saver/releases",
     year: "2026"
   }
 };
